@@ -81,21 +81,7 @@ void Dialogs::message(string msg, string title)
 
 void Dialogs::menu_window()
 {
-    Gtk::Window* window = new Gtk::Window();
-    Gtk::Box *vbox = Gtk::manage(new Gtk::Box(Gtk::ORIENTATION_VERTICAL, 0));
-    //vbox->show();
-    window->add(*vbox);
     
-    Gtk::MenuBar* menubar = Gtk::manage(new Gtk::MenuBar());
-    vbox->pack_start(*menubar, Gtk::PACK_SHRINK, 0);
-    
-    Gtk::MenuItem* menuitem_file = Gtk::manage(new Gtk::MenuItem("_File", true));
-    menubar->append(*menuitem_file);
-    Gtk::Menu *filemenu = Gtk::manage(new Gtk::Menu);
-    menuitem_file->set_submenu(*filemenu);
-    
-    
-    vbox->show_all();
     
     
     
