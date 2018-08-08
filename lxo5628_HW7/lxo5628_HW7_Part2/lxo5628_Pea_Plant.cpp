@@ -1,4 +1,5 @@
 #include "lxo5628_Pea_Plant.h"
+#include "lxo5628_Pea_Plant_Trait_Maps.h"
 
 Pea_Plant::Pea_Plant()
 {

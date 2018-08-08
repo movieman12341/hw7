@@ -1,5 +1,5 @@
 #include "lxo5628_View.h"
-
+#include "Dialogs.h"
 
 
 //View::View()
@@ -27,6 +27,9 @@ int View::get_menu()
 	(3) Exit)";
 
 	string result = Dialogs::input(menu, "main menu");//if hit ok, 1 will be returned as string.
+        
+        //Dialogs::menu_window();
+        
         int return_int = 3;
         if (result != "CANCEL")
         {

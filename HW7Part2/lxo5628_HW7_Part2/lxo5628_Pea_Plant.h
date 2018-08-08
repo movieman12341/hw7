@@ -1,6 +1,5 @@
 #pragma once
 #include "lxo5628_Trait.h"
-#include "lxo5628_Pea_Plant_Trait_Maps.h"
 #include<sstream>
 
 class Pea_Plant
