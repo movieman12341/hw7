@@ -21,8 +21,8 @@
 class MainWindow : public Gtk::Window
 {
     public:
-        MainWindow();
-        MainWindow(const MainWindow& orig);
+        MainWindow(Controller* cont, View* view);
+        //MainWindow(const MainWindow& orig);
         virtual ~MainWindow();
 
     protected:
@@ -31,7 +31,8 @@ class MainWindow : public Gtk::Window
         void onAddTraitClick();
         void onExitClick();
     private:
-
+        Controller* newController;
+        View* newView;
 };
 
 #endif /* MAINWINDOW_H */

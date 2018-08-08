@@ -13,7 +13,10 @@
 
 #include "MainWindow.h"
 
-MainWindow::MainWindow() {
+MainWindow::MainWindow(Controller* cont, View* view) {
+    newController = cont;
+    newView = view;
+    
     set_default_size(1200,600);
     //Gtk::Window* window = new Gtk::Window();
     Gtk::Box *vbox = Gtk::manage(new Gtk::Box(Gtk::ORIENTATION_VERTICAL, 0));
@@ -49,23 +52,23 @@ MainWindow::MainWindow() {
     
 }
 
-MainWindow::MainWindow(const MainWindow& orig) {
-}
+//MainWindow::MainWindow(const MainWindow& orig) {
+//}
 
 MainWindow::~MainWindow() {
 }
 
 void MainWindow::onViewAllTraitsClick()
 {
-    
+    newView->view_all_traits();
 }
 
 void MainWindow::onAddTraitClick()
 {
-    
+    newController->add_trait();
 }
 
 void MainWindow::onExitClick()
 {
-    
+    hide();
 }

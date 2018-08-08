@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 	Controller controller{ pea_plant, view };
 	//controller.gui();
 
-        MainWindow win;
+        MainWindow win (&controller, &view);
         win.set_title("test");
         return app->run(win);
 
